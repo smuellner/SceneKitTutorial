@@ -11,8 +11,6 @@
 import UIKit
 import SceneKit
 import SpriteKit
-import CoreMotion
-import GameController
 
 class GameViewController: UIViewController, SCNSceneRendererDelegate {
     private var _sceneView: SCNView!
@@ -20,9 +18,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
     private var _hud: HUD!
 
     // New in Part 5: Use CoreMotion to fly the plane
-    private var _motionManager = CMMotionManager()
-    private var _startAttitude: CMAttitude?             // Start attitude
-    private var _currentAttitude: CMAttitude?           // Current attitude
+    private var _motionManager = MotionManager()       // Current attitude
 
     // -------------------------------------------------------------------------
     // MARK: - Properties
@@ -53,6 +49,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
     @objc private func handleTap(_ gestureRecognize: UITapGestureRecognizer) {
         // New in Part 4: A tap is used to restart the level (see tutorial)
         if _level.state == .loose || _level.state == .win {
+            _motionManager.stop()
             _level.stop()
             _level = nil
             
@@ -73,7 +70,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         }
         // New in Part 5: A tap is used to start the level (see tutorial)
         else if _level.state == .ready {
-            _startAttitude = _currentAttitude
+            _motionManager.start()
             _level.start()
         }
     }
@@ -99,51 +96,6 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         }
     }
     
-    // -------------------------------------------------------------------------
-    // MARK: - Motion handling
-    
-    private func motionDidChange(data: CMDeviceMotion) {
-        _currentAttitude = data.attitude
-        
-        guard _level != nil, _level?.state == .play else { return }
-
-        // Up/Down
-        let diff1 = _startAttitude!.roll - _currentAttitude!.roll
-        
-        if (diff1 >= Game.Motion.threshold) {
-            _level!.motionMoveUp()
-        }
-        else if (diff1 <= -Game.Motion.threshold) {
-            _level!.motionMoveDown()
-        }
-        else {
-            _level!.motionStopMovingUpDown()
-        }
-        
-        let diff2 = _startAttitude!.pitch - _currentAttitude!.pitch
-        
-        if (diff2 >= Game.Motion.threshold) {
-            _level!.motionMoveLeft()
-        }
-        else if (diff2 <= -Game.Motion.threshold) {
-            _level!.motionMoveRight()
-        }
-        else {
-            _level!.motionStopMovingLeftRight()
-        }
-    }
-
-    // -------------------------------------------------------------------------
-
-    private func setupMotionHandler() {
-        if (GCController.controllers().count == 0 && _motionManager.isAccelerometerAvailable) {
-            _motionManager.accelerometerUpdateInterval = 1/60.0
-            
-            _motionManager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: {(data, error) in
-                self.motionDidChange(data: data!)
-            })
-        }
-    }
 
     // -------------------------------------------------------------------------
     // MARK: - ViewController life cycle
@@ -173,10 +125,10 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         _sceneView.showsStatistics = false
         _sceneView.backgroundColor = UIColor.black
         _sceneView.delegate = self
+        
+        _motionManager.delegate = self
 
         self.view = _sceneView
-
-        setupMotionHandler()
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         _sceneView!.addGestureRecognizer(tapGesture)
@@ -206,4 +158,30 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
     // -------------------------------------------------------------------------
 
+}
+
+extension GameViewController: MotionManagerDelegate {
+    func motionMoveUp() {
+        _level.motionMoveUp()
+    }
+    
+    func motionMoveDown() {
+        _level.motionMoveDown()
+    }
+    
+    func motionStopMovingUpDown() {
+        _level.motionStopMovingUpDown()
+    }
+    
+    func motionMoveLeft() {
+        _level.motionMoveLeft()
+    }
+    
+    func motionMoveRight() {
+        _level.motionMoveRight()
+    }
+    
+    func motionStopMovingLeftRight() {
+        _level.motionStopMovingLeftRight()
+    }
 }

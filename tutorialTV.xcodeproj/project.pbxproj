@@ -131,6 +131,11 @@
 		15A350A525FE4D5B003FD1E7 /* RBRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582AB1A25FE246F00C489D6 /* RBRandom.swift */; };
 		15A350A625FE4D5B003FD1E7 /* RB+CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582AB1525FE246F00C489D6 /* RB+CGPoint.swift */; };
 		15A350AD25FE4D74003FD1E7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582AA7725FE246F00C489D6 /* GameViewController.swift */; };
+		15A350B525FE5263003FD1E7 /* MotionManager+tvos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A350B425FE5263003FD1E7 /* MotionManager+tvos.swift */; };
+		15A350B625FE5263003FD1E7 /* MotionManager+tvos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A350B425FE5263003FD1E7 /* MotionManager+tvos.swift */; };
+		15A350B725FE5263003FD1E7 /* MotionManager+tvos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A350B425FE5263003FD1E7 /* MotionManager+tvos.swift */; };
+		15A350CF25FE5720003FD1E7 /* MotionManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A350CE25FE5720003FD1E7 /* MotionManagerDelegate.swift */; };
+		15A350D025FE5720003FD1E7 /* MotionManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A350CE25FE5720003FD1E7 /* MotionManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -201,6 +206,8 @@
 		15A34F7A25FE4968003FD1E7 /* partIII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partIII.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A34FD325FE4BE6003FD1E7 /* partIV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partIV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A3503925FE4D10003FD1E7 /* partVI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partVI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A350B425FE5263003FD1E7 /* MotionManager+tvos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionManager+tvos.swift"; sourceTree = "<group>"; };
+		15A350CE25FE5720003FD1E7 /* MotionManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManagerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +370,8 @@
 				1582AB1C25FE246F00C489D6 /* AppDelegate.swift */,
 				1582AB1D25FE246F00C489D6 /* RBLog.swift */,
 				1582AB1E25FE246F00C489D6 /* RBPerlinNoiseGenerator.swift */,
+				15A350B425FE5263003FD1E7 /* MotionManager+tvos.swift */,
+				15A350CE25FE5720003FD1E7 /* MotionManagerDelegate.swift */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -671,6 +680,7 @@
 				15A34F6325FE482A003FD1E7 /* RB+CGPoint.swift in Sources */,
 				15A34F6625FE482A003FD1E7 /* AppDelegate.swift in Sources */,
 				15A34F6525FE482A003FD1E7 /* RB+UIColor.swift in Sources */,
+				15A350CF25FE5720003FD1E7 /* MotionManagerDelegate.swift in Sources */,
 				15A34F4525FE4815003FD1E7 /* Handicap.swift in Sources */,
 				15A34F4625FE4815003FD1E7 /* Ring.swift in Sources */,
 				15A34F4425FE4815003FD1E7 /* GameLevel.swift in Sources */,
@@ -680,6 +690,7 @@
 				15A34F4225FE4815003FD1E7 /* Player.swift in Sources */,
 				15A34F6225FE482A003FD1E7 /* RB+SCNVector.swift in Sources */,
 				15A34F6725FE482A003FD1E7 /* RBLog.swift in Sources */,
+				15A350B525FE5263003FD1E7 /* MotionManager+tvos.swift in Sources */,
 				15A34F4725FE4815003FD1E7 /* HUD.swift in Sources */,
 				15A34F4325FE4815003FD1E7 /* GameViewController.swift in Sources */,
 				15A34F4025FE4815003FD1E7 /* GameObject.swift in Sources */,
@@ -728,6 +739,7 @@
 				15A34FF125FE4C65003FD1E7 /* Ring.swift in Sources */,
 				15A3500425FE4C6A003FD1E7 /* RBTerrain.swift in Sources */,
 				15A34FF725FE4C65003FD1E7 /* Handicap.swift in Sources */,
+				15A350B625FE5263003FD1E7 /* MotionManager+tvos.swift in Sources */,
 				15A3500625FE4C6A003FD1E7 /* RBRandom.swift in Sources */,
 				15A3500025FE4C6A003FD1E7 /* RB+UIColor.swift in Sources */,
 				15A3500725FE4C6A003FD1E7 /* RB+SKAction.swift in Sources */,
@@ -745,6 +757,7 @@
 				15A3507525FE4D3F003FD1E7 /* GameSettings.swift in Sources */,
 				15A350A625FE4D5B003FD1E7 /* RB+CGPoint.swift in Sources */,
 				15A3508925FE4D4B003FD1E7 /* Player.swift in Sources */,
+				15A350B725FE5263003FD1E7 /* MotionManager+tvos.swift in Sources */,
 				15A3508D25FE4D4B003FD1E7 /* Bullet.swift in Sources */,
 				15A3509F25FE4D5B003FD1E7 /* RB+SKAction.swift in Sources */,
 				15A350A425FE4D5B003FD1E7 /* RBUtility.swift in Sources */,
@@ -755,6 +768,7 @@
 				15A3509025FE4D4B003FD1E7 /* GameSound.swift in Sources */,
 				15A350A125FE4D5B003FD1E7 /* RBLog.swift in Sources */,
 				15A3508C25FE4D4B003FD1E7 /* Handicap.swift in Sources */,
+				15A350D025FE5720003FD1E7 /* MotionManagerDelegate.swift in Sources */,
 				15A350A325FE4D5B003FD1E7 /* RBTerrain.swift in Sources */,
 				15A3508E25FE4D4B003FD1E7 /* Plane.swift in Sources */,
 				15A350A525FE4D5B003FD1E7 /* RBRandom.swift in Sources */,

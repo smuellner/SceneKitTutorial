@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15A350C025FE52D6003FD1E7 /* MotionManager+ios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A350BE25FE52D6003FD1E7 /* MotionManager+ios.swift */; };
+		15A350C125FE52D6003FD1E7 /* MotionManager+ios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A350BE25FE52D6003FD1E7 /* MotionManager+ios.swift */; };
+		15A350D825FE5741003FD1E7 /* MotionManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A350D725FE5741003FD1E7 /* MotionManagerDelegate.swift */; };
+		15A350D925FE5741003FD1E7 /* MotionManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A350D725FE5741003FD1E7 /* MotionManagerDelegate.swift */; };
 		DB55EF031FE38FA900C2E1CC /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB55EF001FE38FA800C2E1CC /* assets.xcassets */; };
 		DB55EF041FE38FA900C2E1CC /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = DB55EF011FE38FA900C2E1CC /* art.scnassets */; };
 		DB55EF081FE38FC200C2E1CC /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB55EF001FE38FA800C2E1CC /* assets.xcassets */; };
@@ -110,6 +114,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15A350BE25FE52D6003FD1E7 /* MotionManager+ios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionManager+ios.swift"; sourceTree = "<group>"; };
+		15A350D725FE5741003FD1E7 /* MotionManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManagerDelegate.swift; sourceTree = "<group>"; };
 		DB16F22D1D34C291006BA99C /* partI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB16F23E1D34C292006BA99C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB55EEE91FE38E9900C2E1CC /* partII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partII.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +295,8 @@
 				DBCE998B1FEFB36F00DEE81F /* RB+SKAction.swift */,
 				DBBE57E61FF1FF7A0052F32B /* RB+UIColor.swift */,
 				DB55EF0B1FE38FE900C2E1CC /* AppDelegate.swift */,
+				15A350D725FE5741003FD1E7 /* MotionManagerDelegate.swift */,
+				15A350BE25FE52D6003FD1E7 /* MotionManager+ios.swift */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -674,9 +682,11 @@
 				DBDCD59B1FF2CEB100C38FCF /* GameLevel.swift in Sources */,
 				DBDCD58A1FF2CE7B00C38FCF /* RB+CGPoint.swift in Sources */,
 				DBDCD5961FF2CEB100C38FCF /* Handicap.swift in Sources */,
+				15A350D825FE5741003FD1E7 /* MotionManagerDelegate.swift in Sources */,
 				DBDCD5851FF2CE7B00C38FCF /* RBLog.swift in Sources */,
 				DBDCD5891FF2CE7B00C38FCF /* RBUtility.swift in Sources */,
 				DBDCD59C1FF2CEB100C38FCF /* GameObject.swift in Sources */,
+				15A350C025FE52D6003FD1E7 /* MotionManager+ios.swift in Sources */,
 				DBDCD5881FF2CE7B00C38FCF /* RBTerrain.swift in Sources */,
 				DBDCD5971FF2CEB100C38FCF /* GameViewController.swift in Sources */,
 				DBDCD59D1FF2CEB100C38FCF /* HUD.swift in Sources */,
@@ -706,7 +716,9 @@
 				DBDCD5BE1FF3D58300C38FCF /* RB+CGPoint.swift in Sources */,
 				DBDCD5B91FF3D58300C38FCF /* RBLog.swift in Sources */,
 				DBDCD5CC1FF3D5CA00C38FCF /* GameObject.swift in Sources */,
+				15A350D925FE5741003FD1E7 /* MotionManagerDelegate.swift in Sources */,
 				DBDCD5BD1FF3D58300C38FCF /* RBUtility.swift in Sources */,
+				15A350C125FE52D6003FD1E7 /* MotionManager+ios.swift in Sources */,
 				DBDCD5BC1FF3D58300C38FCF /* RBTerrain.swift in Sources */,
 				DBDCD5D11FF3D5CA00C38FCF /* Handicap.swift in Sources */,
 				DBDCD5C01FF3D58300C38FCF /* RB+UIColor.swift in Sources */,
