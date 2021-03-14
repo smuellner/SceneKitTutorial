@@ -71,7 +71,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
                 self.hud.message("READY?", information: "- Touch screen to start -")
             }
         }
-            // New in Part 5: A tap is used to start the level (see tutorial)
+        // New in Part 5: A tap is used to start the level (see tutorial)
         else if _level.state == .ready {
             _startAttitude = _currentAttitude
             _level.start()
