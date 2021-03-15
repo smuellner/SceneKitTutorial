@@ -40,7 +40,6 @@ class MotionManager {
     private func motionDidChange(data: CMDeviceMotion) {
         _currentAttitude = data.attitude
         
-        // guard _level != nil, _level?.state == .play else { return }
         guard let delegate = delegate else { return }
 
         // Up/Down

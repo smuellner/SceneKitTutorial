@@ -162,26 +162,32 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
 extension GameViewController: MotionManagerDelegate {
     func motionMoveUp() {
+        guard _level != nil, _level?.state == .play else { return }
         _level.motionMoveUp()
     }
     
     func motionMoveDown() {
+        guard _level != nil, _level?.state == .play else { return }
         _level.motionMoveDown()
     }
     
     func motionStopMovingUpDown() {
+        guard _level != nil, _level?.state == .play else { return }
         _level.motionStopMovingUpDown()
     }
     
     func motionMoveLeft() {
+        guard _level != nil, _level?.state == .play else { return }
         _level.motionMoveLeft()
     }
     
     func motionMoveRight() {
+        guard _level != nil, _level?.state == .play else { return }
         _level.motionMoveRight()
     }
     
     func motionStopMovingLeftRight() {
+        guard _level != nil, _level?.state == .play else { return }
         _level.motionStopMovingLeftRight()
     }
 }
